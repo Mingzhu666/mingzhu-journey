@@ -441,7 +441,9 @@ const stationDefs = [
     //   'redis'   — a RESP terminal + key cells lighting up
     //   'gpt'     — token attention lines + generated text typing out
     // `kind` is the one-line descriptor, `stack` the tech pills, `highlights`
-    // the 2–3 bullet points, `note` an optional easter-egg badge.
+    // the 2–3 bullet points, `note` an optional easter-egg badge, and `repo`
+    // the GitHub URL (renders a "View on GitHub" link in the showcase; omit to
+    // hide the link for a project that has no public repo).
     projects: [
       {
         num: '01',
@@ -456,6 +458,7 @@ const stationDefs = [
           'Fluid page transitions and micro-interactions with Framer Motion spring physics — AnimatePresence route transitions and gesture-driven hover / tap.',
         ],
         visual: 'pte',
+        repo: 'https://github.com/Mingzhu666/pte-matser',
       },
       {
         num: '02',
@@ -470,6 +473,7 @@ const stationDefs = [
         ],
         visual: 'journey',
         note: "You're inside it right now.",
+        repo: 'https://github.com/Mingzhu666/mingzhu-journey',
       },
       {
         num: '03',
@@ -483,6 +487,7 @@ const stationDefs = [
           'Higher throughput by keeping maintenance work off the request path.',
         ],
         visual: 'redis',
+        repo: 'https://github.com/Mingzhu666/redisgo',
       },
       {
         num: '04',
@@ -496,6 +501,7 @@ const stationDefs = [
           'Tuned training dynamics and optimization to improve text coherence.',
         ],
         visual: 'gpt',
+        repo: 'https://github.com/Mingzhu666/GPT-like-Language-Model-from-Scratch',
       },
     ],
   },

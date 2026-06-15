@@ -1,5 +1,11 @@
 :root {
   color-scheme: dark;
+  /* Typography tokens — one knob per role, used across every TOUR station
+     overlay so titles share one font and body shares one font everywhere.
+     --font-display = headings/titles · --font-body = content · --font-mono = labels/metrics. */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --bg: #01040b;
   --bg-2: #041021;
   --text: #e6ebff;
@@ -7,7 +13,7 @@
   --accent: #6ee7ff;
   --border: rgba(125, 211, 255, 0.2);
   --card-bg: rgba(2, 7, 16, 0.72);
-  font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -69,7 +75,7 @@ canvas {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -144,7 +150,7 @@ canvas {
 }
 
 .progress .plabel {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.16em;
   color: var(--text-dim);
@@ -182,7 +188,7 @@ canvas {
   cursor: pointer;
   padding: 8px 18px;
   border-radius: 8px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -229,7 +235,7 @@ canvas {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 8px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -304,7 +310,7 @@ canvas {
   gap: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(253, 224, 71, 0.5);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
 }
 
@@ -399,7 +405,7 @@ canvas {
 
 .volunteer-note__years {
   margin: 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: clamp(10px, 1.1vw, 12px);
   letter-spacing: 0.22em;
   color: var(--vn);
@@ -407,6 +413,7 @@ canvas {
 }
 
 .volunteer-note h2 {
+  font-family: var(--font-display);
   margin: 8px 22px 2px 0;
   font-size: clamp(22px, 2.6vw, 34px);
   line-height: 1;
@@ -419,7 +426,7 @@ canvas {
   margin: 0 0 clamp(14px, 1.6vw, 18px);
   padding-bottom: clamp(12px, 1.6vh, 16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   color: rgba(214, 224, 245, 0.66);
   font-size: clamp(10px, 1.05vw, 12px);
@@ -477,7 +484,7 @@ canvas {
   background: rgba(2, 7, 16, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.12em;
   text-align: right;
@@ -522,7 +529,7 @@ canvas {
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.25);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.12em;
   color: inherit;
@@ -643,7 +650,7 @@ canvas {
 }
 
 .kbd-hint__keylabel {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -657,7 +664,7 @@ canvas {
 }
 
 .kbd-hint__label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -731,7 +738,7 @@ canvas {
   justify-content: center;
   background: var(--bg);
   z-index: 100;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.24em;
   color: var(--text-dim);
@@ -763,7 +770,7 @@ canvas {
 
 .loader-title {
   margin: 0;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(40px, 8vw, 86px);
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -875,7 +882,7 @@ canvas {
   z-index: 60; /* above .ui (10), below the loader (100) */
   display: flex;
   flex-direction: column;
-  font-family: Georgia, 'Times New Roman', 'Songti SC', serif;
+  font-family: var(--font-body);
   animation: ebook-in 0.5s ease both;
   --ph: min(84vh, 62vw);   /* page height */
   --pw: calc(var(--ph) * 0.68); /* page width (portrait) */
@@ -919,7 +926,7 @@ canvas {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 14px;
   letter-spacing: 0.04em;
   color: #eaf1ff;
@@ -944,7 +951,7 @@ canvas {
   border-radius: 999px;
   background: rgba(7, 14, 30, 0.6);
   color: #dbe9ff;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 13px;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
@@ -955,7 +962,7 @@ canvas {
   transform: translateY(-1px);
 }
 .ebook__close kbd {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.1em;
   padding: 2px 6px;
@@ -1148,7 +1155,7 @@ canvas {
 
 /* Plate (left) */
 .award__index {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: clamp(10px, 1.2vh, 12px);
   letter-spacing: 0.4em;
   color: var(--gilt);
@@ -1200,6 +1207,7 @@ canvas {
 }
 
 .award__title {
+  font-family: var(--font-display);
   margin: 4% 0 0;
   font-size: clamp(18px, 2.5vh, 27px);
   line-height: 1.14;
@@ -1209,7 +1217,7 @@ canvas {
 }
 .award__issuer {
   margin-top: 3%;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: clamp(9px, 1.2vh, 11px);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1223,7 +1231,7 @@ canvas {
   padding: 6px 16px;
   border: 1px solid rgba(227, 193, 120, 0.55);
   border-radius: 999px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: clamp(9px, 1.15vh, 11px);
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -1243,7 +1251,7 @@ canvas {
 
 /* Story (right) */
 .award__kicker {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: clamp(9px, 1.2vh, 11px);
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -1300,7 +1308,7 @@ canvas {
 }
 .degree__fact dt {
   margin: 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: clamp(9px, 1.2vh, 11px);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1320,7 +1328,7 @@ canvas {
 .degree__honours-kicker { margin-top: 8%; color: var(--gilt); }
 .ebook__cover-sub {
   margin: 7% 0 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: clamp(9px, 1.5vh, 12px);
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -1374,7 +1382,7 @@ canvas {
   background: radial-gradient(circle at 38% 32%, rgba(127, 227, 255, 0.22), rgba(57, 182, 230, 0.04));
   border: 1.5px solid rgba(227, 193, 120, 0.72);
   box-shadow: 0 0 24px rgba(57, 182, 230, 0.35), inset 0 0 16px rgba(0, 0, 0, 0.35);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   letter-spacing: 0.16em;
   font-size: clamp(13px, 2vh, 20px);
   color: #ecd9ab;
@@ -1403,7 +1411,7 @@ canvas {
 .ebook__cover-open {
   position: absolute;
   bottom: 9%;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 12px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -1450,7 +1458,7 @@ canvas {
   justify-content: center;
   gap: 16px;
   padding: 14px 0 26px;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
 }
 .ebook__hint-text {
   font-size: 12.5px;
@@ -1570,7 +1578,7 @@ canvas {
   z-index: 60; /* above .ui (10), below the loader (100) */
   display: flex;
   flex-direction: column;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-body);
   animation: coin-in 0.5s ease both;
   --coin: min(62vh, 82vw, 520px); /* coin diameter */
   --cyan: #7fe3ff;
@@ -1642,7 +1650,7 @@ canvas {
   transform: translateY(-1px);
 }
 .coin__close kbd {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.1em;
   padding: 2px 6px;
@@ -1763,6 +1771,7 @@ canvas {
   margin-bottom: 6%;
 }
 .coin-role {
+  font-family: var(--font-display);
   margin: 0;
   font-size: clamp(20px, 3.6vh, 32px);
   font-weight: 700;
@@ -1772,7 +1781,7 @@ canvas {
 }
 .coin-period {
   margin: 2.5% 0 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: clamp(11px, 1.7vh, 14px);
   letter-spacing: 0.12em;
   color: var(--gilt);
@@ -1815,6 +1824,7 @@ canvas {
   margin-bottom: 2%;
 }
 .coin-card-title {
+  font-family: var(--font-display);
   margin: 0 0 4%;
   font-size: clamp(15px, 2.5vh, 22px);
   font-weight: 700;
@@ -1898,7 +1908,7 @@ canvas {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   color: #9fb4d6;
   cursor: pointer;
@@ -2026,7 +2036,7 @@ canvas {
   z-index: 60;
   display: flex;
   flex-direction: column;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-body);
   animation: reactor-in 0.5s ease both;
   --mag: #ff65f2;
   --pur: #b75cff;
@@ -2098,7 +2108,7 @@ canvas {
   transform: translateY(-1px);
 }
 .reactor__close kbd {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.1em;
   padding: 2px 6px;
@@ -2166,7 +2176,7 @@ canvas {
 .reactor__load-label {
   flex: 0 0 auto;
   margin-left: 10px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2233,7 +2243,7 @@ canvas {
 .reactor__status {
   position: absolute;
   bottom: -2px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.22em;
   color: var(--hot);
@@ -2251,7 +2261,7 @@ canvas {
   to { opacity: 1; transform: translateX(0); }
 }
 .reactor__sysline {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -2274,6 +2284,7 @@ canvas {
   color: var(--hot);
 }
 .reactor__heading {
+  font-family: var(--font-display);
   margin: 6px 0 0;
   font-size: clamp(18px, 2.6vw, 25px);
   font-weight: 700;
@@ -2284,7 +2295,7 @@ canvas {
 .reactor__heading--role { font-size: clamp(20px, 3vw, 28px); margin-top: 8px; }
 .reactor__period {
   margin-top: 7px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12.5px;
   letter-spacing: 0.1em;
   color: var(--mag);
@@ -2380,7 +2391,7 @@ canvas {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   color: #b9a6cf;
   cursor: pointer;
@@ -2480,7 +2491,7 @@ canvas {
   z-index: 60;
   display: flex;
   flex-direction: column;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-body);
   animation: showcase-fade 0.5s ease both;
   --cy: #6ee7ff;
   --cy2: #35b8ff;
@@ -2545,7 +2556,7 @@ canvas {
   transform: translateY(-1px);
 }
 .showcase__close kbd {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.1em;
   padding: 2px 6px;
@@ -2606,13 +2617,14 @@ canvas {
 
 .showcase__info { min-width: 0; }
 .showcase__meta {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.22em;
   color: var(--cy);
 }
 .showcase__meta-dim { color: var(--dim); }
 .showcase__name {
+  font-family: var(--font-display);
   margin: 8px 0 0;
   font-size: clamp(26px, 4vw, 40px);
   font-weight: 700;
@@ -2688,6 +2700,47 @@ canvas {
   border-radius: 50%;
   background: var(--cy);
   box-shadow: 0 0 10px rgba(110, 231, 255, 0.8);
+}
+
+/* ---- "View on GitHub" link ---- */
+/* Inline neon link sitting under the highlights. Subtle by design: a thin
+   cyan underline that lights up on hover, with the arrow nudging out — reads
+   as a link, not a heavy button. Driven by `repo` in src/data/stations.js;
+   the JSX only renders it when a project has a repo URL. */
+.showcase__repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin-top: 22px;
+  padding-bottom: 3px;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--cy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(110, 231, 255, 0.28);
+  transition: color 0.25s ease, border-color 0.25s ease, text-shadow 0.25s ease;
+  animation: showcase-rise 0.55s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+.showcase__repo:hover,
+.showcase__repo:focus-visible {
+  color: #eaffff;
+  border-color: rgba(110, 231, 255, 0.85);
+  text-shadow: 0 0 16px rgba(110, 231, 255, 0.55);
+  outline: none;
+}
+.showcase__repo-ico {
+  flex: none;
+  filter: drop-shadow(0 0 6px rgba(110, 231, 255, 0.45));
+}
+.showcase__repo-arrow {
+  font-size: 13px;
+  opacity: 0.85;
+  transition: transform 0.25s ease;
+}
+.showcase__repo:hover .showcase__repo-arrow,
+.showcase__repo:focus-visible .showcase__repo-arrow {
+  transform: translate(2px, -2px);
 }
 
 /* ---- Visual screen ---- */
@@ -2841,7 +2894,7 @@ canvas {
   bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 9.5px;
   letter-spacing: 0.1em;
   color: #9fb6da;
@@ -2855,7 +2908,7 @@ canvas {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 .redis__term {
   background: rgba(0, 0, 0, 0.34);
@@ -2921,7 +2974,7 @@ canvas {
 }
 .gpt__svg { width: 212px; height: 120px; }
 .gpt__tok { fill: rgba(123, 97, 255, 0.22); stroke: rgba(168, 150, 255, 0.7); stroke-width: 1; }
-.gpt__toktext { fill: #e7e1ff; font-size: 9px; font-family: 'JetBrains Mono', monospace; text-anchor: middle; }
+.gpt__toktext { fill: #e7e1ff; font-size: 9px; font-family: var(--font-mono); text-anchor: middle; }
 .gpt__attn {
   fill: none;
   stroke: #a896ff;
@@ -2934,7 +2987,7 @@ canvas {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   color: #cfe0ff;
 }
@@ -2979,7 +3032,7 @@ canvas {
   transform: translateY(-2px);
 }
 .showcase__thumb-num {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--cy);
 }
@@ -3025,6 +3078,7 @@ canvas {
   .showcase__screen { height: 200px; }
   .showcase__arrow { display: none; }
   .showcase__highlights li:nth-child(3) { display: none; }
+  .showcase__repo { margin-top: 16px; font-size: 14px; }
   .showcase__progress { display: none; }
   .showcase__chrome { padding: 14px 16px; }
 }
@@ -3041,7 +3095,7 @@ canvas {
   z-index: 60;
   display: flex;
   flex-direction: column;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-body);
   animation: connect-fade 0.5s ease both;
   --cy: #6ee7ff;
   --blu: #8db7ff;
@@ -3106,7 +3160,7 @@ canvas {
   transform: translateY(-1px);
 }
 .connect__close kbd {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.1em;
   padding: 2px 6px;
@@ -3210,7 +3264,7 @@ canvas {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.18em;
   color: #acd0ff;
@@ -3272,7 +3326,7 @@ canvas {
 }
 .connect__node-text { display: flex; flex-direction: column; min-width: 0; }
 .connect__node-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.16em;
   color: var(--cy);
@@ -3301,7 +3355,7 @@ canvas {
   gap: 8px;
   padding: 7px 16px;
   border-radius: 999px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.04em;
   color: #8fb0d6;
