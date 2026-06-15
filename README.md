@@ -8,9 +8,13 @@
 <h3 align="center">Interactive Portfolio Diorama</h3>
 
   <p align="center">
-    A low-poly 3D portfolio with a neon-lit diorama and a small car that drives along a glowing rail between seven stations &mdash; an interactive scaffold you can extend with your own Blender models, copy, and styling.
+    A cinematic 3D personal portfolio where a small car drives through seven neon stations &mdash; introducing my engineering experience, selected projects, education, volunteering, and ways to connect.
   </p>
 </div>
+
+<p align="center">
+  <img src="docs/readme-assets/mingzhu-journey.gif" alt="Animated walkthrough of Mingzhu's interactive 3D portfolio" width="100%" />
+</p>
 
 
 
@@ -32,7 +36,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Most portfolio sites are static scroll pages. **Interactive Portfolio Diorama** turns a portfolio into a tiny world: a low-poly car drives along a glowing Catmull-Rom rail between **seven themed stations** &mdash; workstation, house, tech tower, factory, office, trophy, and comm hub &mdash; while a cinematic camera follows and an HTML overlay stays in sync with whichever station the car is currently visiting.
+Most portfolio sites are static scroll pages. **Interactive Portfolio Diorama** turns my portfolio into a tiny world: a low-poly car drives along a glowing Catmull-Rom rail between **seven personal stations** &mdash; Welcome, Education, Finance, Energy, Projects, Volunteering, and Connect &mdash; while a cinematic camera follows and HTML overlays reveal the story behind each stop.
 
 **Highlights**
 - Seven neon-lit stations on a single Catmull-Rom curve &mdash; edit one array of positions and the rail, t-values, and UI rebuild automatically
@@ -40,6 +44,19 @@ Most portfolio sites are static scroll pages. **Interactive Portfolio Diorama** 
 - Bloom / Vignette / Chromatic Aberration post-FX stack tuned for retina without melting laptops (DPR capped at 1.75)
 - Zustand store as a tiny shared bridge between the R3F scene and the HTML overlay (progress bar, station card, controls)
 - Drop-in `.glb` slots via `useGLTF` &mdash; replace placeholder buildings with real Blender models per station
+
+### Visual Story
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/readme-assets/hero-world.png" alt="Meet Mingzhu through a 3D portfolio journey" /></td>
+    <td width="50%"><img src="docs/readme-assets/engineering-impact.png" alt="Mingzhu engineering experience and impact" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/readme-assets/selected-projects.png" alt="Mingzhu selected projects across AI, systems, and web" /></td>
+    <td width="50%"><img src="docs/readme-assets/journey-connect.png" alt="Mingzhu education volunteering and contact stations" /></td>
+  </tr>
+</table>
 
 ### Built With
 
@@ -105,6 +122,7 @@ The 3D scene and the HTML overlay never talk to each other directly &mdash; both
 - Node.js &ge; 18.x
 
 ### Installation
+
 
 1. Clone and install
    ```sh
