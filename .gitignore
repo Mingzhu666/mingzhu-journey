@@ -5,3 +5,5 @@ dist
 .vite
 .superpowers/
 vite.config.js.timestamp-*.mjs
+docs/readme-assets/*.html
+docs/readme-assets/source-shots/
