@@ -1,0 +1,5 @@
+# Netlify SPA fallback: serve index.html for deep links like /FNZ, /EDUCATION,
+# etc. Existing static files (assets, models, draco, resume.pdf) are served
+# first, so this only catches client-side routes. Vite copies public/ into
+# dist/ on build, so this ships automatically. (Vercel uses vercel.json.)
+/*    /index.html    200
