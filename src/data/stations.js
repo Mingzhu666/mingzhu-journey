@@ -797,9 +797,9 @@ const stationDefs = [
       {
         slot: 'email',
         label: 'EMAIL',
-        value: 'mingzhuwan@gmail.com',
+        value: 'Stella.NEU.dev@gmail.com',
         action: 'copy',
-        href: 'mailto:mingzhuwan@gmail.com',
+        href: 'mailto:Stella.NEU.dev@gmail.com',
       },
       {
         slot: 'resume',
