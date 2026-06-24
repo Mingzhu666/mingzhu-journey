@@ -54,9 +54,11 @@ export default function App() {
         }}
         onCreated={({ gl }) => {
           gl.toneMapping = THREE.ACESFilmicToneMapping;
-          // Lifted from 0.76 → 0.9 so the diorama reads brighter on first load
-          // (overview was crushing the midtones). Bloom carries the highlights.
-          gl.toneMappingExposure = 0.9;
+          // Lifted 0.76 → 0.9 → 0.94 so the diorama reads brighter on first
+          // load (overview was crushing the midtones, and the muddy Education/
+          // Finance buildings needed a touch more). Bloom carries the
+          // highlights; the reflective floor + rim light carry the depth.
+          gl.toneMappingExposure = 0.94;
 
           // Recover from a lost GPU context instead of showing a black
           // canvas. preventDefault() lets the browser fire a "restored"

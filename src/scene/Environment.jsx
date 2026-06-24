@@ -133,9 +133,29 @@ export default function Environment() {
         shadow-bias={-0.00035}
         shadow-normalBias={0.04}
       />
-      {/* (Removed: the opposite-side blue fill directional and, previously,
-          3 dim background accent point lights. The hemisphere light lifts the
-          shadow side instead; building emissives + bloom carry local colour.) */}
+
+      {/* Cool back-rim directional — NO shadow, so it's essentially free (one
+          entry in the light loop, not the per-pixel point-light cost that
+          drove the old flicker). It rakes the buildings from behind/opposite
+          the key, lighting each silhouette's edge so the row reads with real
+          depth instead of as flat cardboard cut-outs. This silhouette
+          separation is one of the biggest "cinematic / premium" cues. */}
+      <directionalLight
+        position={[-14, 9, -12]}
+        intensity={0.9}
+        color="#8fb4ff"
+      />
+
+      {/* Faint WARM under-fill from the front so the cool shadow sides don't
+          read as muddy grey-blue. Kept very low (0.2) so the neon night mood
+          is untouched — it only adds a hint of temperature contrast, which is
+          what makes a night render feel lit rather than flat. Lower/remove if
+          you want a purely cool palette. */}
+      <directionalLight
+        position={[5, 3, 14]}
+        intensity={0.2}
+        color="#ffd6ad"
+      />
     </>
   );
 }
