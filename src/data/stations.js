@@ -226,7 +226,7 @@ const stationDefs = [
     title: 'Finance',
     subtitle: 'First Role · FNZ',
     description:
-      'Analyst Developer at FNZ, a global wealth-management fintech. A commemorative coin is minted for each thing I shipped — arrive to flip through them.',
+      'Software Engineer Intern at FNZ, a global wealth-management fintech. A commemorative coin is minted for each thing I shipped — arrive to flip through them.',
     color: '#b6c6ff',
     accent: '#8fa3ff',
     // OVERVIEW is unchanged: the finance building stays the landmark here.
@@ -243,7 +243,7 @@ const stationDefs = [
     // you land on) and in the overlay header.
     role: {
       company: 'FNZ',
-      title: 'Analyst Developer',
+      title: 'Software Engineer Intern',
       period: 'Mar 2022 – Feb 2023',
       blurb: 'Global wealth-management fintech',
     },
@@ -308,7 +308,7 @@ const stationDefs = [
     title: 'Energy',
     subtitle: 'Second Role · AEMO',
     description:
-      'Application Developer at the Australian Energy Market Operator. A power console where each step brings one system online — arrive to power up the plant.',
+      'Software Engineer at the Australian Energy Market Operator. A power console where each step brings one system online — arrive to power up the plant.',
     color: '#ff65f2',
     accent: '#b75cff',
     // OVERVIEW is unchanged: the energy building stays the landmark here. The
@@ -327,8 +327,8 @@ const stationDefs = [
     role: {
       company: 'AEMO',
       fullCompany: 'Australian Energy Market Operator',
-      title: 'Application Developer',
-      period: 'May 2023 – Present',
+      title: 'Software Engineer',
+      period: 'Jun 2023 – May 2026',
       blurb: "Australia's national energy market operator",
     },
     // Each entry is one system you "bring online". `sys` is the short status
